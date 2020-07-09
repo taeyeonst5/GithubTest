@@ -1,5 +1,5 @@
 # GithubTest
-17Wave-PreTest
+PreTest
 - 主要使用：Kotlin、MVVM、LiveData、Paging實現分頁加載
 
 ## third-party library：
