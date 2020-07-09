@@ -7,6 +7,7 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import com.allen_chou.githubtest.BuildConfig
 
 private const val ALLEN_LOG_TAG = "beta"
@@ -40,4 +41,8 @@ fun Activity.checkNetworkIsConnect(): Boolean {
         val info = manager.activeNetworkInfo
         return (info != null && info.isConnectedOrConnecting)
     }
+}
+
+fun Context.showToast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }

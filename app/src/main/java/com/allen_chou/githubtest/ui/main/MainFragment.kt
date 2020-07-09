@@ -15,9 +15,7 @@ import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.allen_chou.githubtest.R
 import com.allen_chou.githubtest.api.User
-import com.allen_chou.githubtest.extensions.checkNetworkIsConnect
-import com.allen_chou.githubtest.extensions.hideSoftKeyboard
-import com.allen_chou.githubtest.extensions.logd
+import com.allen_chou.githubtest.extensions.*
 import com.allen_chou.githubtest.paging.NetWorkState
 import com.allen_chou.githubtest.paging.UserDataSource
 import com.google.android.material.snackbar.Snackbar
@@ -67,12 +65,7 @@ class MainFragment : Fragment() {
 
     private fun search() {
         if (!requireActivity().checkNetworkIsConnect()) {
-            Toast.makeText(
-                requireContext(),
-                getString(R.string.text_check_network_state),
-                Toast.LENGTH_SHORT
-            )
-                .show()
+            requireContext().showToast(getString(R.string.text_check_network_state))
             return
         }
 
@@ -85,6 +78,8 @@ class MainFragment : Fragment() {
                 //need observe after query
                 setObserve()
 
+            } else {
+                requireContext().showToast(getString(R.string.text_enter_text))
             }
         }
 

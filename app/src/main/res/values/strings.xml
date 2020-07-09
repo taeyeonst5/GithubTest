@@ -5,4 +5,5 @@
     <string name="text_load_fail_message">load fail %1$s</string>
     <string name="text_no_results">No Results</string>
     <string name="hint_search">Search...</string>
+    <string name="text_enter_text">Please Enter Text</string>
 </resources>
