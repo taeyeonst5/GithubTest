@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GithubTest</string>
+    <string name="text_check_network_state">Please Check Network State</string>
+    <string name="text_retry">Retry</string>
+    <string name="text_load_fail_message">load fail %1$s</string>
+    <string name="text_no_results">No Results</string>
+    <string name="hint_search">Search...</string>
 </resources>
